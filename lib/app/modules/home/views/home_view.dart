@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -13,10 +15,20 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'HomeView is working',
+              style: TextStyle(fontSize: 20),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/counter');
+                },
+                child: Text('Counter Page'))
+          ],
         ),
       ),
     );

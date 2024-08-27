@@ -1,3 +1,4 @@
+import 'package:getx/app/modules/biodata/views/output_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/biodata/bindings/biodata_binding.dart';
@@ -17,17 +18,22 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => const HomeView(),
+      page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.COUNTER,
-      page: () => const CounterView(),
+      page: () => CounterView(),
       binding: CounterBinding(),
     ),
     GetPage(
       name: _Paths.BIODATA,
-      page: () => const BiodataView(),
+      page: () => BiodataView(),
+      binding: BiodataBinding(),
+    ),
+    GetPage(
+      name: _Paths.OUTPUT,
+      page: () => OutputView(),
       binding: BiodataBinding(),
     ),
   ];
